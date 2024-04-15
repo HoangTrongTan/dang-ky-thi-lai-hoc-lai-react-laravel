@@ -1,0 +1,100 @@
+$mobile-width: 480px; 
+@mixin mobile { 
+    @media (max-width: #{$mobile-width - 1px}) {     
+      @content;   
+   } 
+  } 
+.wrapper{
+    
+    padding: 0 30px;
+    margin-top: 10px;
+    .box{
+        border-radius: 10px;
+        background: #fff;
+        border: #dee2e6 solid 1px;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        padding: 10px 30px;
+        @include mobile{
+            display: block;
+        }
+        .item-left{
+            display: flex;
+            align-items: center;
+            @include mobile{
+                margin-top: 10px;
+            }
+        }
+        .item-right{
+            margin-left: auto;
+            
+            .info{
+                display: flex;
+                align-items: center;
+                @include mobile{
+                    margin-top: 20px;
+                }
+                .icon{
+                    font-size: 20px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    
+}
+.btn:nth-child(1){
+    background: #e3edf7;
+    color: blue;
+}
+.btn:nth-child(2){
+    background: #f7e3ed;
+    color: rgb(218, 11, 111);
+}
+.btn:nth-child(3){
+    background: #e3f5f7;
+    color: rgb(0, 225, 255);
+}
+.btn:nth-child(4){
+    background: #f7e3e3;
+    color: rgb(255, 0, 0);
+}
+.btn:nth-child(5){
+    background: #e3f7e7;
+    color: rgb(0, 255, 89);
+}
+.btn + .btn{
+    margin-left: 10px;
+}
+.btn {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    padding: 1.2em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+            -0.5px -0.5px 0px rgba(255,255,255,1),
+            0.5px 0.5px 0px rgba(0,0,0,0.15),
+            0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+  }
+  
+  .btn .icon {
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover .icon {
+    transform: scale(0.9);
+    fill: #333333;
+  }

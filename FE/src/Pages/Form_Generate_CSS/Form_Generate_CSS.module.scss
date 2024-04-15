@@ -1,0 +1,128 @@
+:root{
+    --width-selector: 380px;
+}
+.wrapper{
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    border: #dee2e6 solid 1px;
+    padding: 10px;
+    .title{
+        text-align: center;
+        margin: 30px auto;
+        span{
+          font-size: 30px;
+          font-weight: bold;
+          color: #60605f;
+          text-align: center;
+          // letter-spacing: 5px;
+          text-shadow: 0px 5px 5px rgba(158, 158, 156, 0.549);
+        }
+    }
+    .upload-file{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .wrapper-footer{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      .note{
+        width: 70%;
+        color: #8e8c8cc6;
+      }
+    }
+    .list-wrapper{
+      padding: 10px 10px 10px 10px;
+      .item-list{
+        position: relative;
+        background-color: #EBEBEB;
+        border-radius: 10px;
+        margin: 5px 20px 5px 0;
+        z-index: 5;
+        
+        nav{
+          display: inline-block;
+          padding: 10px;
+        }
+        .process-title{
+          float: right;
+
+        }
+        @mixin xoa-chung{
+          position: absolute;
+          font-size: 32px;
+          color: red;
+          background: #fff;
+          opacity: 0;
+          z-index: -1;
+          transition: all 0.4s ease-in-out;
+        }
+        .btn-xoa{
+          @include xoa-chung;
+          right: 0;
+          top: 0;
+          
+        }
+        .btn-xoa-check-truongkhoa{
+          @include xoa-chung;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .btn-sua{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background: #e4e471;
+          border-radius: 50%;
+          padding: 7px 5px;
+          color: #ffffff;
+          opacity: 0;
+          z-index: -1;
+          transition: all 0.4s ease-in-out;
+        }
+        @mixin btn-chung_hover{
+          opacity: 1;
+          right: -35px;
+        }
+        &:hover .btn-sua{
+          @include btn-chung_hover;
+          bottom: -15px;
+        }
+        &:hover .btn-xoa{
+          @include btn-chung_hover;
+          top: -15px;
+        }
+        &:hover .btn-xoa-check-truongkhoa{
+          @include btn-chung_hover;
+        }
+        .btn-gui-lai{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          opacity: 0;
+          transition: all 0.3s ease-out;
+          padding: 10px;
+          border-radius: 10px;
+          background-color: #15C815;
+          color: #fff;
+        }
+        &:hover .btn-gui-lai{
+          opacity: 1;
+          right: 30px;
+        }
+        .process-title{
+          transition: opacity 0.2s linear;
+        }
+        &:hover .process-title{
+          opacity: 0;
+        }
+      }
+    }
+}

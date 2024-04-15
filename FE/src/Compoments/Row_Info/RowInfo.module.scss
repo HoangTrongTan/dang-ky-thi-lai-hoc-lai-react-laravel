@@ -1,0 +1,104 @@
+:root{
+    --width-dang-ky-thi:100px;
+}
+.wapper{
+    margin-top: 20px;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in;
+    .form {
+        --border-height: 1px;
+        --border-before-color: rgba(221, 221, 221, 0.39);
+        --border-after-color: #5891ff;
+        --input-hovered-color: #4985e01f;
+        position: relative;
+        .requied_span {
+            position: absolute;
+            bottom: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: red;
+            min-width: 75px;
+          }
+   
+    }
+  
+        /* styling of Input */
+        .input {
+        font-size: 0.9rem;
+        background-color: transparent;
+        width: 90%;
+        box-sizing: border-box;
+        padding-inline: 0.5em;
+        padding-block: 0.7em;
+        border: none;
+        border-bottom: var(--border-height) solid var(--border-before-color);
+        }
+        /* styling of animated border */
+        .input-border {
+        position: absolute;
+        background: var(--border-after-color);
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+        }
+        /* Hover on Input */
+        
+        input:focus {
+        outline: none;
+        }
+        // /* here is code of animated border */
+        input:focus ~ .input-border {
+        width: 100%;
+        }
+}
+
+.choose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 3px 0px rgb(139, 113, 255);
+    border-radius: 50px;
+    color: #000;
+}
+.nam-hoc{
+    border-radius: 10px;
+}
+.choose-for-item{
+    width: var(--width-dang-ky-thi);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 7px 0;
+    
+    button{
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s linear;
+        color: #fff;
+        font-weight: 700;
+        padding: 3 0;
+        &:hover{
+            background-color: rgb(214, 202, 254);
+        }
+
+    }
+    button + button {
+        margin-top: 5px;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

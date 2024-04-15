@@ -1,0 +1,106 @@
+
+.wrapper{
+    position: absolute;
+    background-color: #F5F5F5;
+    width: 250px;
+    height: 400px;
+    border-radius: 10px;
+    right: 0;
+    top: 85%;
+    z-index: 100;
+    transform: translateY(-50%);
+    box-shadow: 0 12px 15px 10px #b6b4b4;
+    cursor: all-scroll;
+    .title{
+        text-align: center;
+        padding: 15px 0;
+    }
+    .btn-close{
+        padding: 0;
+        position: absolute;
+        right: 5px;
+        top: 1px;
+        font-size: 20px;
+        color: #FC7E98;
+        transition: color 0.3s linear;
+        &:hover{
+            color: #f94e70;
+        }
+    }
+    .form {
+        --border-height: 1px;
+        --border-before-color: rgba(221, 221, 221, 0.39);
+        --border-after-color: #5891ff;
+        --input-hovered-color: #4985e01f;
+        position: relative;
+        .requied_span {
+            position: absolute;
+            bottom: -17px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: red;
+            min-width: 75px;
+          }
+          /* styling of Input */
+          .input {
+          font-size: 0.9rem;
+          background-color: transparent;
+          width: 90%;
+          box-sizing: border-box;
+          padding-inline: 0.5em;
+          padding-block: 0.7em;
+          border: none;
+          border-bottom: var(--border-height) solid var(--border-before-color);
+          }
+          /* styling of animated border */
+          .input-border {
+          position: absolute;
+          background: var(--border-after-color);
+          width: 0%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          transition: 0.3s;
+          }
+          /* Hover on Input */
+          
+          input:focus {
+          outline: none;
+          }
+          // /* here is code of animated border */
+          input:focus ~ .input-border {
+          width: 100%;
+          }
+    }
+    .select_box {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        .radio-ky{
+            width: 20px;
+            height: 20px;
+        }
+        .box-radio{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .ghichu-form{
+        padding: 15px 5px 5px 5px;
+        .ghichu-text{
+            width: 100%;
+            resize: none;
+            height: 60px;
+            outline: none;
+            border: none;
+        }
+    }
+    .box-btn-gui{
+        text-align: center;
+        button{
+            padding: 10px;
+            background-color: yellowgreen;
+            border-radius: 10px;
+        }
+    }
+  }

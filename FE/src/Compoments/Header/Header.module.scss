@@ -1,0 +1,34 @@
+$mobile-width: 480px; 
+@mixin mobile { 
+    @media (max-width: #{$mobile-width - 1px}) {     
+      @content;   
+   } 
+  } 
+.wrapper{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    flex-shrink: 0;
+    @include mobile{
+        display: block;
+        .info{
+            display: block;
+        }
+        .actions{
+            display: block;
+        }
+    }
+    .actions{
+        display: flex;
+        align-items: center;
+    }
+    
+    
+}
+
+
+
+

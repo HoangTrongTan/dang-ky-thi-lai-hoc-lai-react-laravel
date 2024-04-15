@@ -1,0 +1,103 @@
+
+    .item-list{
+      position: relative;
+      background-color: #EBEBEB;
+      border-radius: 10px;
+      margin: 5px 20px 5px 0;
+      z-index: 5;
+      
+      nav{
+        display: inline-block;
+        padding: 10px;
+      }
+      .process-title{
+        float: right;
+      }
+      .nav-btn{
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+        display: flex;
+        gap: 0.3em;
+      }
+      .btn-xoa-check-truongkhoa{
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        right: 0;
+        transition: all 0.4s ease-in-out;
+        border-radius: 10px;
+        background-color: red;
+        padding: 5px 10px;
+        color: #fff;
+      }
+      .btn-gui-lai{
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        right: 0;
+        border-radius: 10px;
+        background-color: rgb(9, 255, 0);
+        transition: all 0.4s ease-in-out;
+        padding: 5px 10px;
+        color: #fff;
+      }
+      &:hover .nav-btn{
+        opacity: 1;
+        right: -80px;
+      }
+      &:hover .btn-gui-lai{
+        opacity: 1;
+        right: 15px;
+      }
+      &:hover .btn-xoa-check-truongkhoa{
+        opacity: 1;
+        right: -35px;
+      }
+      .process-title{
+        transition: all 0.4s ease-in-out;
+      }
+      &:hover .process-title{
+        opacity: 0;
+      }
+      .btn-xoa{
+        border-radius: 10px;
+        background-color: red;
+        padding: 5px 10px;
+        color: #fff;
+      }
+      .btn-sua{
+        border-radius: 10px;
+        background-color: orange;
+        padding: 5px 10px;
+        color: #fff;
+      }
+    }
+.title-heading{
+    border-radius: 10px;
+    box-shadow: 1px -4px 20px 0px #b7b6b6;;
+}
+.title-heading th{
+    text-align: left;
+    padding: 10px 13px;
+    font-size: 17px; 
+}
+.table-thilai{
+    td {
+        padding: 6px 12px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    
+      }
+}
+.table-thilai {
+    tr{
+        transition: all 0.3s linear;
+        &:hover{
+        background-color:#ddd;
+        cursor:pointer;
+    }
+    }
+}

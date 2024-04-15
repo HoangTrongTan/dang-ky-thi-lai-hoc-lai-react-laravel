@@ -1,0 +1,76 @@
+
+.wrapper{
+    padding: 0  300px 10px 300px;
+    .don_dangky{
+        background-color: #fff;
+        padding: 90px 70px 200px 70px;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 22px;
+        p:nth-child(2){
+            font-weight: 900;
+            color: #000;
+            margin: 0;
+            text-decoration: underline;
+        }
+        .title-left{
+            text-align: center;
+        }
+        .title-right{
+            text-align: center;
+        }
+    }
+    .khoa-text{
+        text-align: center;
+        margin:0 0 20px  0;
+        font-size: 20px;
+        input{
+            width: 500px;
+        }
+    }
+    .form-info{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .content{
+        font-size: 20px;
+        
+    }
+    .form-table{
+        position: relative;
+        margin-top: 10px;
+        font-size: 15px;
+        &:hover .actions_plus--minus{
+            right: 0;
+            opacity: 1;
+        }
+        .actions_plus--minus{
+            position: absolute;
+            z-index: 100;
+            right: -10px;
+            opacity: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.4s linear;
+            div:nth-child(1){
+                cursor: pointer;
+                font-size: 25px;
+            }
+            div:nth-child(2){
+                cursor: pointer;
+                font-size: 25px;
+            }
+        }
+
+    }
+    .xac-nhan_wrapp{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}

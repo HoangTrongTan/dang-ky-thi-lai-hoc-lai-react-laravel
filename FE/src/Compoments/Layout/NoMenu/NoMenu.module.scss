@@ -1,0 +1,25 @@
+.body{
+    padding: 10px 30px ;
+    .back-home{
+        display: flex;
+        align-items: center;
+        .btn-back_home{
+            display: flex;
+            align-items: center;
+            transition: all 0.3s linear;
+            padding: 10px;
+            border-radius: 10px;
+            color: #000;
+            text-decoration: none;
+            &:hover{
+                cursor: pointer;
+                background-color: rgb(224, 228, 228);
+                color: #000;
+
+            }
+            .text-back-home{
+                margin-left: 10px;
+            }
+        }
+    }
+}
